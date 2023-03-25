@@ -1,19 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
-int Han(int n); // 함수 원형 선언
-
-int main(void)
-{
-	int input, result;
-
-	scanf("%d", &input);
-	result = Han(input);
-	printf("%d", result);
-    
-    return 0;
-}
-
 int Han(int n) // 한수 함수 정의
 {
 	int i, cnt = 0, hund, ten, one;
@@ -36,4 +23,15 @@ int Han(int n) // 한수 함수 정의
 		// 100 이전에 한수는 99까지 99개 이므로 99에 count 값을 더해준다.
 		return (99 + cnt); 
 	}
+}
+
+int main(void)
+{
+	int input, result;
+
+	scanf("%d", &input);
+	result = Han(input);
+	printf("%d", result);
+    
+    return 0;
 }
